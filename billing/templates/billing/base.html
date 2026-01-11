@@ -1,0 +1,27 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unitech BillPay</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'billing:tenant_list' %}">Unitech BillPay</a>
+    <div>
+      <a class="btn btn-outline-primary" href="{% url 'billing:scan_reading' %}">Scan Meter</a>
+      <a class="btn btn-outline-secondary" href="/admin/">Admin</a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  {% block content %}{% endblock %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+```
